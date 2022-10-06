@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 body {
-    background-color:#000;
+    background-color:#222;
     margin:0;
     
 }
@@ -12,7 +12,7 @@ canvas{
     width:100%;
     border:2px solid white;
     border-radius:4px;
-    background-color:#000;
+    background-color:#111;
     margin-top:0;
 }
 .divreset{

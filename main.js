@@ -10,8 +10,7 @@ window.onload = function(){
    const tileBlock= canvas.width / tileCount;
    const tileSize= tileBlock-2;
    const reset = document.getElementById("reset");
-   const bite = /*new Audio("https://www.fesliyanstudios.com/play-mp3/5759");*/
-    new Audio("https://www.fesliyanstudios.com/play-mp3/2918");
+   const bite = new Audio("https://www.fesliyanstudios.com/play-mp3/2918");
    
 
     
