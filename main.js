@@ -7,7 +7,7 @@ window.onload = function(){
    const cw= document.body.clientWidth;
    const ch= canvas.height;
    const tileCount= 30;
-   const tileBlock= canvas.width / tileCount;
+   const tileBlock= cw / tileCount;
    const tileSize= tileBlock-2;
    const reset = document.getElementById("reset");
    const bite = new Audio("https://www.fesliyanstudios.com/play-mp3/2918");
@@ -29,7 +29,7 @@ window.onload = function(){
    
  //apple property
    let applex= Math.floor(Math.random() * (tileCount -5));
-   let appley= Math.floor(Math.random() * (tileCount -5));
+   let appley= Math.floor(Math.random() * tileCount);
    
   //speed and stuff
    let xvelocity= 0;
@@ -238,12 +238,12 @@ window.onload = function(){
         ctx.font = "50px helvetica"
         ctx.fillStyle = "white"
         
-        let gradient = ctx.createLinearGradient(0,0,canvas.width,0);
+        let gradient = ctx.createLinearGradient(0,0,cw,0);
         gradient.addColorStop(0,"purple");
         gradient.addColorStop(0.5,"magenta");
         gradient.addColorStop(1,"pink");
         ctx.fillStyle= gradient;
-        ctx.fillText("Game over",canvas.width/5,canvas.height/2);
+        ctx.fillText("Game over",cw/5,canvas.height/2);
         
         }   
         return gameover;    
@@ -277,7 +277,7 @@ window.onload = function(){
         //highscore
         ctx.font = ".8rem san-serif"
         ctx.fillStyle = "white"
-        ctx.fillText("High: " + highScore,canvas.width-50,20);
+        ctx.fillText("High: " + highScore,cw-50,20);
     }
     
     
@@ -285,7 +285,7 @@ window.onload = function(){
     function speedtxt(){
         ctx.font = "10px verdana"
         ctx.fillStyle = "white"
-        ctx.fillText("Speed: "+ speed,canvas.width/2.2,20);
+        ctx.fillText("Speed: "+ speed,cw/2.2,20);
         ctx.fill();
     }
     
