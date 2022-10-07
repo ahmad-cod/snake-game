@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 body {
-    background-color:#222;
+    background-color:#001;
     margin:0;
     
 }
@@ -47,7 +47,13 @@ button{
 .div2 button{
     margin-top:.2em;
     padding:1em 2em;
-    background:linear-gradient(45deg,purple,pink);
+    background:linear-gradient(60deg,crimson,pink);
     color:white;
     font-size:20px;
  }   
+ #left {
+    margin-right: 2rem;
+ }
+ #right {
+    margin-left: 2rem;
+ }
