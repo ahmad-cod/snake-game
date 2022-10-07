@@ -4,7 +4,7 @@ window.onload = function(){
     
    const canvas = document.getElementById("canvas");
    const ctx = canvas.getContext('2d');
-   const cw= canvas.width;
+   const cw= document.body.clientWidth;
    const ch= canvas.height;
    const tileCount= 30;
    const tileBlock= canvas.width / tileCount;
@@ -12,7 +12,7 @@ window.onload = function(){
    const reset = document.getElementById("reset");
    const bite = new Audio("https://www.fesliyanstudios.com/play-mp3/2918");
    
-
+    console.log(cw)
     
    //button var
    const up= document.getElementById("up");
@@ -28,8 +28,8 @@ window.onload = function(){
    let snakeparts= [];
    
  //apple property
-   let applex= 5;
-   let appley= 5;
+   let applex= Math.floor(Math.random() * (tileCount -5));
+   let appley= Math.floor(Math.random() * (tileCount -5));
    
   //speed and stuff
    let xvelocity= 0;
@@ -51,8 +51,6 @@ window.onload = function(){
          
      }
  }
-   
-   
    
    
    //game loop
@@ -96,7 +94,7 @@ window.onload = function(){
   
    function drawSnake(){
    //head of snake
-        ctx.fillStyle="orange";
+        ctx.fillStyle="yellow";
         ctx.fillRect(headx *tileBlock,heady*tileBlock,tileSize,tileSize);
         ctx.fill();
         
@@ -207,9 +205,9 @@ window.onload = function(){
      if(applex === headx && appley=== heady){
       //for random apple X position
         bite.play();
-          applex= Math.floor(Math.random() * tileCount);
+          applex= Math.floor(Math.random() * (tileCount -5));
       //for random apple Y position
-          appley= Math.floor(Math.random() * tileCount);
+          appley= Math.floor(Math.random() * (tileCount -5));
           snakeTail++;
           score++;
           
